@@ -178,7 +178,7 @@ export default class App extends React.Component {
         return (
             <View style={styles.wrapper}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>TodoS App</Text>
+                    <Text style={styles.title}>Realtime Todo App</Text>
                 </View>
                 <View style={styles.formPicker}>
                     <TouchableOpacity style={styles.btnPicker} onPress={this.showPicker.bind(this)}>
@@ -192,7 +192,8 @@ export default class App extends React.Component {
                         placeholder="write to do here ..."
                         onChangeText={(text) => this.changeNewTodoText(text)}
                         value={this.state.todoText}
-                        multiline={true} />
+                        multiline={true}
+                        underlineColorAndroid="#12a5f4" />
                     <TouchableOpacity style={styles.btnAdd} onPress={this.clickAddTodoButton.bind(this)}>
                         <Text>Add</Text>
                     </TouchableOpacity>
@@ -220,10 +221,12 @@ const styles = StyleSheet.create({
     header: {
         height: 50,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        backgroundColor : "#12a5f4",
     },
     title: {
         fontSize: 20,
+        color : "#ffffff"
     },
     formInput: {
         flexDirection: "row",
